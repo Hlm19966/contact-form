@@ -11,22 +11,22 @@
   <form>
     <fieldset>
       <legend>Contact Us</legend>
-        <label for="name">First Name</label>
-        <input type="text" name="first-name" autocomplete="name" id="name" aria-describedby="name-error" required/>
+        <label for="name">FirstName</label>
+        <input type="text" name="first-name" autocomplete="name" id="FirstName" aria-describedby="name-error" required/>
         <p id="name-error">This field is required</p>
-         <label for="Last Name">Last Name</label>
+         <label for="Last Name">LastName</label>
          <input type="text" name="Last-name" autocomplete="family-name" id="lastName" aria-describedby="last-name-error" required>
          <p id="last-name-error">This field is required</p>
-          <label for="Email">Email Address</label>
+          <label for="email">Email Address</label>
           <input type="email" name="email" autocomplete="email" id="email" aria-describedby="email-error" required>
           <p id="email-error">Please enter a valid email address</p>
            <fieldset>
             <legend>Query Type</legend>
-            <label for="General Enquiry">
+            <label for="GeneralEnquiry">
               <input type="radio" name="query-type" value="general" id="generalEnquriry" required/>
               General Enquiry
             </label>
-            <label for="Support Request">
+            <label for="SupportRequest">
               <input type="radio" name="query-type" value="Support" id="SupportRequest" required/>
               Support Request
             </label>
@@ -39,7 +39,7 @@
               I consent to being contacted by the team
             </label>
             <p id="error-agree">To submit this form, please consent to being contacted</p>
-              <input type="submit" name="submit" id="submit"/>
+              <button>Submit</button>
     </fieldset> 
   </form>
 </body>

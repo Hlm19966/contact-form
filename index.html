@@ -2,51 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern and accessible forms for all users.">
+  <link rel="stylesheet" href="style.css" />
+  <title>Contact form</title>
 </head>
 <body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <form>
+    <fieldset>
+      <legend>Contact Us</legend>
+        <label for="name">First Name</label>
+        <input type="text" name="first-name" autocomplete="name" id="name" aria-describedby="name-error" required/>
+        <p id="name-error">This field is required</p>
+         <label for="Last Name">Last Name</label>
+         <input type="text" name="Last-name" autocomplete="family-name" id="lastName" aria-describedby="last-name-error" required>
+         <p id="last-name-error">This field is required</p>
+          <label for="Email">Email Address</label>
+          <input type="email" name="email" autocomplete="email" id="email" aria-describedby="email-error" required>
+          <p id="email-error">Please enter a valid email address</p>
+           <fieldset>
+            <legend>Query Type</legend>
+            <label for="General Enquiry">
+              <input type="radio" name="query-type" value="general" id="generalEnquriry" required/>
+              General Enquiry
+            </label>
+            <label for="Support Request">
+              <input type="radio" name="query-type" value="Support" id="SupportRequest" required/>
+              Support Request
+            </label>
+          </fieldset>
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message"  aria-describedby="message-error" required/>
+            <p id="message-error">This field is required</p>
+            <label for="agreeing">
+              <input type="checkbox" id="agreeing" name="agree" required aria-describedby="error-agree"/>
+              I consent to being contacted by the team
+            </label>
+            <p id="error-agree">To submit this form, please consent to being contacted</p>
+              <input type="submit" name="submit" id="submit"/>
+    </fieldset> 
+  </form>
 </body>
 </html>

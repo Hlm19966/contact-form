@@ -8,39 +8,42 @@
   <title>Contact form</title>
 </head>
 <body>
+  <div class="container">
+    <h1>Contact Us</h1>
   <form>
     <fieldset>
-      <legend>Contact Us</legend>
-        <label for="name">FirstName</label>
+      <legend class="sr-only">Contact form section</legend>
+        <label for="name">First Name</label>
         <input type="text" name="first-name" autocomplete="name" id="FirstName" aria-describedby="name-error" required/>
-        <p id="name-error">This field is required</p>
-         <label for="Last Name">LastName</label>
+        <p id="name-error">This field is required</p> 
+         <label for="lastName">Last Name</label>
          <input type="text" name="Last-name" autocomplete="family-name" id="lastName" aria-describedby="last-name-error" required>
          <p id="last-name-error">This field is required</p>
           <label for="email">Email Address</label>
           <input type="email" name="email" autocomplete="email" id="email" aria-describedby="email-error" required>
           <p id="email-error">Please enter a valid email address</p>
+    </fieldset>      
            <fieldset>
-            <legend>Query Type</legend>
-            <label for="GeneralEnquiry">
+            <legend class="query-type">Query Type</legend>
+            <label for="GeneralEnquiry" class="general-enquriry">
               <input type="radio" name="query-type" value="general" id="generalEnquriry" required/>
               General Enquiry
             </label>
-            <label for="SupportRequest">
+            <label for="SupportRequest" class="Support-request">
               <input type="radio" name="query-type" value="Support" id="SupportRequest" required/>
               Support Request
             </label>
           </fieldset>
             <label for="message">Message</label>
-            <input type="text" id="message" name="message"  aria-describedby="message-error" required/>
+            <textarea class="message-input" id="message" name="message"  aria-describedby="message-error" required></textarea>
             <p id="message-error">This field is required</p>
-            <label for="agreeing">
+            <label for="agreeing" class="checkbox-container">
               <input type="checkbox" id="agreeing" name="agree" required aria-describedby="error-agree"/>
               I consent to being contacted by the team
             </label>
             <p id="error-agree">To submit this form, please consent to being contacted</p>
               <button>Submit</button>
-    </fieldset> 
   </form>
+</div>
 </body>
 </html>

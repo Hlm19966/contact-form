@@ -22,12 +22,12 @@
       <div class="input-group">
          <label for="lastName">Last Name</label>
          <input type="text" name="Last-name" autocomplete="family-name" id="lastName" aria-describedby="last-name-error" required>
-         <p id="last-name-error">This field is required</p>
+         <p id="last-name-error" class="error-message">This field is required</p>
         </div>
       </div>
           <label for="email">Email Address</label>
           <input type="email" name="email" autocomplete="email" id="email" aria-describedby="email-error" required>
-          <p id="email-error">Please enter a valid email address</p>
+          <p id="email-error" class="error-message">Please enter a valid email address</p>
     </fieldset>      
            <fieldset>
             <legend class="query-type">Query Type</legend>
@@ -40,17 +40,17 @@
               <input type="radio" name="query-type" value="Support" id="SupportRequest" required/>
               Support Request
             </label>
-            <p>Please select a query type</p>
+            <p class="error-message">Please select a query type</p>
           </div>
           </fieldset>
             <label for="message">Message</label>
             <textarea class="message-input" id="message" name="message"  aria-describedby="message-error" required></textarea>
-            <p id="message-error">This field is required</p>
+            <p id="message-error"  class="error-message">This field is required</p>
             <label for="agreeing" class="checkbox-container">
               <input type="checkbox" id="agreeing" name="agree" required aria-describedby="error-agree"/>
               I consent to being contacted by the team
             </label>
-            <p id="error-agree">To submit this form, please consent to being contacted</p>
+            <p id="error-agree" class="error-message">To submit this form, please consent to being contacted</p>
               <button class="submit-btn" id="submitBtn">Submit</button>
   </form>
 </div>

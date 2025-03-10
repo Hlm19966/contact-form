@@ -13,18 +13,25 @@
   <form>
     <fieldset>
       <legend class="sr-only">Contact form section</legend>
+      <div class="name-fields">
+      <div class="input-group">
         <label for="name">First Name</label>
         <input type="text" name="first-name" autocomplete="name" id="FirstName" aria-describedby="name-error" required/>
-        <p id="name-error">This field is required</p> 
+        <p id="name-error" class="error-message">This field is required</p>
+      </div>
+      <div class="input-group">
          <label for="lastName">Last Name</label>
          <input type="text" name="Last-name" autocomplete="family-name" id="lastName" aria-describedby="last-name-error" required>
          <p id="last-name-error">This field is required</p>
+        </div>
+      </div>
           <label for="email">Email Address</label>
           <input type="email" name="email" autocomplete="email" id="email" aria-describedby="email-error" required>
           <p id="email-error">Please enter a valid email address</p>
     </fieldset>      
            <fieldset>
             <legend class="query-type">Query Type</legend>
+            <div class="query-grid">
             <label for="GeneralEnquiry" class="general-enquriry">
               <input type="radio" name="query-type" value="general" id="generalEnquriry" required/>
               General Enquiry
@@ -33,6 +40,8 @@
               <input type="radio" name="query-type" value="Support" id="SupportRequest" required/>
               Support Request
             </label>
+            <p>Please select a query type</p>
+          </div>
           </fieldset>
             <label for="message">Message</label>
             <textarea class="message-input" id="message" name="message"  aria-describedby="message-error" required></textarea>
@@ -42,8 +51,9 @@
               I consent to being contacted by the team
             </label>
             <p id="error-agree">To submit this form, please consent to being contacted</p>
-              <button>Submit</button>
+              <button class="submit-btn" id="submitBtn">Submit</button>
   </form>
 </div>
+<script src="main.js"></script>
 </body>
 </html>

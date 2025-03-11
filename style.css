@@ -264,6 +264,33 @@ p {
 
 /*End of the button*/ 
 
+.success-container {
+    display: none;
+    max-width: 26.438rem;
+    padding: 15px 18px;
+    color: var(--White);
+    background-color: var(--Grey-900-darker);
+    border-radius: 9px;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+.success-message {
+    color: var(--Grey-500-medium);
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.flex-secion {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-success-check {
+    width: 15px;
+}
 
 @media only screen and (min-width:60rem) {
    

@@ -121,10 +121,10 @@ label {
     font-size: 1.005rem;
 }
 
-label:not(:last-of-type)::after {
+label:not(.Support-request):not(.general-enquriry):not(.agreeing)::after {
     content: "*";
     color: var(--Green-600-medium);
-    margin-left: 7px;
+    margin-left: 6px;
 }
 
 .Support-request, .general-enquriry {
@@ -143,29 +143,10 @@ label:not(:last-of-type)::after {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin: 40px 0;
+    margin: 30px 0;
     position: relative;
     font-size: 17.7px;
     opacity: 0.9;
-}
-
-.checkbox-container::after {
-    content: "*";
-    color: var(--Green-600-medium);
-    position: absolute;
-    top: 0;
-    left: 35%;
-    margin-left: 5px;
-    transform: translateY(-50%);
-}
-
-
-label.Support-request::after {
-    content: "";
-}
-
-label.general-enquriry::after {
-    content: "";
 }
 
 /*end of the label*/
@@ -177,7 +158,11 @@ input {
     border-radius: 6px;
     padding: 12px;
     cursor: pointer;
-    margin-bottom: 15px ;
+    margin-bottom: 8px ;
+}
+
+input[type="text"] {
+    margin-top: 8px;
 }
 
 
@@ -196,7 +181,6 @@ input[type="checkbox"] {
     border: 1px solid var(--Grey-500-medium);
     width: 7%;
 }    
-
 
 .query-grid {
     display: grid;
@@ -237,7 +221,7 @@ input:not([type="radio"]):not([type="checkbox"]):focus, select {
     border-radius: 6px;
     cursor: pointer;
     will-change: transform;
-    font-family: 1.10rem;
+    font-size: 1rem;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -247,22 +231,21 @@ input:not([type="radio"]):not([type="checkbox"]):focus, select {
     transform: scale(1.0);
 }
 
+/*End of the button*/ 
+
+/*error section*/
 .error-message {
    display: none;
    color: var(--Red);
-   margin-bottom: 15px; 
+   margin-bottom: 1px; 
 }
 
 .error-border {
     border : 1px solid var(--Red);
 }
+/*end of the error section*/
 
-p {
-    display: none;
-}
-
-
-/*End of the button*/ 
+/*success-container*/
 
 .success-container {
     display: none;
@@ -292,6 +275,8 @@ h4 {
     width: 15px;
 }
 
+/*end of the success-container*/
+
 @media only screen and (min-width:60rem) {
    
    body {
@@ -300,6 +285,16 @@ h4 {
 
    .container {
     max-width: 40.438rem;
+    padding: 30px 25px;
+   }
+
+   input[type="email"] {
+     margin-bottom: 10px;
+     
+   }
+
+   .checkbox-container {
+    margin: 30px -12px;
    }
 
    .name-fields,
@@ -307,6 +302,7 @@ h4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
+    margin-bottom: 7.5px;
    }
 
    .Support-request {

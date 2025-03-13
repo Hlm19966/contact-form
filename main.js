@@ -117,7 +117,7 @@ function handelEmail() {
       return true;
     } else {
       errorMessage.style.display = "block";
-      checkBox.classList.remove(`error-border`);
+      checkBox.classList.add(`error-border`);
       return false;
     }
   }
